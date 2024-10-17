@@ -69,7 +69,6 @@ function checkGameOver(){
      if(answer!==""){
         gameinfo.innerText = `winner player - ${answer}`;
         newGamebtn.classList.add("active");
-        // gameOver = true;  
         return;
      }
      // lets check whether the game tied
