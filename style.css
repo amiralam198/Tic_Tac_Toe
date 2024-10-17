@@ -1,0 +1,80 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' ,'sans-serif';
+}
+.wrapper{
+    width: auto;
+    height: 100vh;
+    background-image: url(./images/white-wood-board-wallpaper-background.webp);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items:center;
+} 
+.btn{
+   background: lightblue;
+   color: black;
+   position: absolute;
+   bottom: 3rem;
+   left: 50%;
+   transform: translate(-50%);
+   border-radius: 1rem;
+   border: 1px solid black;
+   padding: 0.5rem 3rem;
+   text-align: center;
+   cursor: pointer;
+}
+.game-info{
+    
+    color: black;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: lightblue;
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding: 0.5rem 3rem;
+    text-align: center;
+}
+.tictactoe{
+    width: 90%;
+    max-width: 20rem;
+    background-color: lightblue;
+    border-radius: 1rem;
+    border: 1px solid black;
+    padding: 2rem;
+    display: grid;
+    aspect-ratio: 1/1;
+    grid-template-columns: repeat(3,1fr);
+}
+    .box {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        font-size: 3rem;
+        color: black;
+        /* display: none; */
+        justify-content: center;
+        align-items: center;
+    }
+    .box1,.box2,.box4,.box5{
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+    .box3,.box6{
+        border-bottom: 2px solid white;
+    }
+    .box7,.box8{
+        border-right: 2px solid white;
+    }
+    .btn.active{
+        display: flex;
+    }
+    .win{
+        background-color: green;
+    }
+
