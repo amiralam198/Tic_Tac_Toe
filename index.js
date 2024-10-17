@@ -5,7 +5,6 @@ const newGamebtn = document.querySelector(".btn");
 
 let currentPlayer;
 let gameGrid;
-let gameOver = false;  // Add a gameOver flag
 
 
 const winningPosition = [
@@ -70,7 +69,7 @@ function checkGameOver(){
      if(answer!==""){
         gameinfo.innerText = `winner player - ${answer}`;
         newGamebtn.classList.add("active");
-        gameOver = true;  
+        // gameOver = true;  
         return;
      }
      // lets check whether the game tied
@@ -81,12 +80,11 @@ function checkGameOver(){
      if(fillCount===9){
         gameinfo.innerText = `Game Tied!`;
         newGamebtn.classList.add("active");
-        gameOver = true;  
 
      }  
 }
 function handleClick(index){
-    if(gameGrid[index]=== "" &&!gameOver){
+    if(gameGrid[index]=== ""){
         boxes[index].innerText = currentPlayer; // changes in UI
         gameGrid[index] = currentPlayer; // changes in js grid
         boxes[index].style.pointerEvents = "none"; 
